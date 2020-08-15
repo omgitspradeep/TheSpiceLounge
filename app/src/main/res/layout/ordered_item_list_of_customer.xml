@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ordered_item_table_columns"
+        android:weightSum="6"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Qty"
+            android:textColor="#000"
+            android:textSize="@dimen/textAppearance_mdpi_16_sp"
+            />
+
+        <TextView
+            android:id="@+id/ordered_item"
+            android:layout_width="0dp"
+            android:layout_weight="2.5"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Item"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/textAppearance_mdpi_16_sp"
+            />
+
+        <TextView
+            android:id="@+id/a"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Status"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="@dimen/textAppearance_mdpi_16_sp"
+            />
+
+        <TextView
+            android:id="@+id/f"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Price"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/textAppearance_mdpi_16_sp"
+            />
+
+        <TextView
+            android:id="@+id/r"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Feedback"
+            android:textColor="#000"
+            android:textSize="@dimen/textAppearance_mdpi_16_sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/ordered_item_table_columns"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/customer_orders_list_recycler"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/ordered_item_table_columns"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:id="@+id/progressBarFeedbacks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+
+        />
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="6"
+        android:textSize="@dimen/textAppearance_mdpi_16_sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+    <TextView
+        android:id="@+id/qty"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="#000"
+        />
+
+    <TextView
+        android:id="@+id/cust_ordered_item"
+        android:layout_width="0dp"
+        android:layout_weight="2.5"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Chicken MoMo(Steam)"
+        android:textColor="@color/colorPrimaryDark"
+        />
+
+    <TextView
+        android:id="@+id/cust_order_status"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Waiting"
+        android:textColor="@android:color/holo_green_dark"
+        />
+    <TextView
+        android:id="@+id/cust_order_price"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="120"
+        android:textColor="@color/colorPrimaryDark"
+        />
+
+<!--
+    Customer is able to provide feedback if the order status is served
+-->
+    <ImageButton
+        android:id="@+id/customer_feedback_button"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="3dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/like"
+        android:gravity="center"
+        android:visibility="invisible"
+        />
+
+
+    </LinearLayout>
+
+<View
+    android:layout_marginTop="15dp"
+    android:layout_marginStart="35dp"
+    android:layout_marginEnd="35dp"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sujan.info.thespicelounge.CustomerFeedbackActivity"
+    >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        >
+
+        <ImageView
+            android:background="@drawable/momos"
+            android:id="@+id/food_image_feedback"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="10dp"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription"/>
+
+        <TextView
+            android:id="@+id/food_name_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/food_image_feedback"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            android:text="Veg Momo (Steam)"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            tools:ignore="RtlHardcoded"/>
+
+
+
+        <RatingBar
+            android:id="@+id/food_rating_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/food_name_feedback"
+            android:layout_toEndOf="@+id/food_image_feedback"
+            android:numStars="5"
+            android:rating="4"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_marginStart="12dp"
+            />
+
+        <View
+            android:id="@+id/line_feedback"
+            android:layout_below="@+id/food_image_feedback"
+            android:background="@android:color/darker_gray"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="2dp"/>
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/userFeedbackContainer"
+            android:layout_width="match_parent"
+            android:background="@drawable/button_border"
+            android:layout_below="@id/line_feedback"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/feedback_title_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share your happiness and suggestion by giving us feedback here."
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:textStyle="bold"
+                tools:ignore="RtlHardcoded"/>
+
+            <RatingBar
+                android:layout_below="@+id/feedback_title_message"
+                android:id="@+id/user_rating_feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:focusable="true"
+                android:clickable="true"
+                android:stepSize="1"
+                style="@style/Widget.AppCompat.RatingBar"
+                />
+
+            <EditText
+                android:layout_below="@+id/user_rating_feedback"
+                android:id="@+id/user_feedback"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:background="@color/white_greyish"
+                android:lines="4"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/current_customer_name"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/user_feedback"
+                android:layout_margin="10dp"
+                android:singleLine="true"
+                android:hint="Your Name Please"
+
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/cust_feedback_push"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_feedback"
+                android:text="submit"
+                android:background="@android:color/holo_blue_dark"
+                android:textSize="18sp"
+                tools:ignore="RtlHardcoded"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/white"
+                android:layout_marginRight="20dp"
+                />
+
+        </RelativeLayout>
+
+        <!--
+            Adapter to add in this recycler is feedback_adapter_recycler which displays feedback by customers who
+            have that meal.
+        -->
+
+        <TextView
+            android:id="@+id/feedback_title_message_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/cust_feedbacks_avl"
+            android:textColor="#000"
+            android:layout_below="@+id/userFeedbackContainer"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/feedbacks_list_recycler"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/feedback_title_message_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+
+
+        <ProgressBar
+            android:id="@+id/progressbar_cust_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            />
+
+
+    </RelativeLayout>
+</ScrollView>

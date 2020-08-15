@@ -1,0 +1,155 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    android:orientation="vertical"
+    tools:context="com.sujan.info.thespicelounge.fragments.CashierTableFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Table Selection"
+            android:drawableRight="@drawable/food_dish"
+            android:textColor="#7d522e"
+            android:textSize="@dimen/textAppearance_mdpi_16_sp"
+            />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="4" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#F3EBD6" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#6B6A68" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#F3EBD6" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="69" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="71" >
+
+                <GridView
+                    android:id="@+id/Cashier_GV_Tables"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:columnWidth="@dimen/factor_mdpi_27_dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="@dimen/factor_mdpi_21_dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="auto_fit"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="@dimen/factor_mdpi_05_dp" />
+
+                <TextView
+                    android:id="@+id/id_smart_menu_empty_for_all_screen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:shadowColor="@android:color/white"
+                    android:shadowDx="-2"
+                    android:shadowDy="2"
+                    android:visibility="invisible"
+                    android:shadowRadius=".01"
+                    android:text="@string/string_no_data_exist"
+                    android:textColor="#baac98"
+                    android:textSize="@dimen/textAppearance_mdpi_25_sp" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/factor_mdpi_06_dp"
+            android:gravity="right|top"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/factor_mdpi_04_dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/factor_mdpi_05_dp"
+                android:drawableLeft="@drawable/image_activity_table_icon_available"
+                android:drawablePadding="@dimen/factor_mdpi_01_dp"
+                android:drawableStart="@drawable/image_activity_table_icon_available"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/string_activity_table_available"
+                android:textColor="#565656"
+                android:textSize="@dimen/textAppearance_mdpi_08_sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/image_activity_table_icon_busy"
+                android:drawablePadding="@dimen/factor_mdpi_01_dp"
+                android:drawableStart="@drawable/image_activity_table_icon_busy"
+                android:gravity="center_vertical"
+                android:text="@string/string_activity_table_occupied"
+                android:textColor="#565656"
+                android:textSize="@dimen/textAppearance_mdpi_08_sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6" />
+
+    <TextView
+        android:id="@+id/Cashier_table_TV_ResturantName"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="14"
+        android:gravity="center"
+        android:textColor="#e8e5c2"
+        android:textSize="@dimen/textAppearance_mdpi_15_sp" />
+
+</LinearLayout>

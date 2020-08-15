@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        android:textSize="@dimen/textAppearance_mdpi_16_sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/sNo_chef"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="@dimen/textAppearance_mdpi_18_sp"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/chef_ordered_item"
+            android:layout_width="0dp"
+            android:layout_weight="2.5"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Chicken MoMo(Steam)"
+            android:textColor="@color/colorPrimaryDark"
+            />
+
+        <TextView
+            android:id="@+id/chef_order_time"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="120"
+            android:textColor="@android:color/holo_green_dark"
+            />
+
+        <Button
+            android:id="@+id/chef_status_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="3dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/chef_order_qty"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@android:color/holo_green_dark"
+            />
+
+
+        <!--
+            Customer is able to provide feedback if the order status is served
+        -->
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_below="@+id/ll"
+        android:id="@+id/customer_request_message"
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_below="@+id/customer_request_message"
+        android:layout_marginTop="@dimen/factor_mdpi_15_dp"
+        android:layout_marginStart="@dimen/factor_mdpi_35_dp"
+        android:background="@android:color/holo_blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/factor_mdpi_01_dp"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<android.support.v7.widget.CardView
+android:id="@+id/cardView"
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:card_view="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_margin="2dp"
+card_view:cardBackgroundColor="#fff"
+card_view:cardCornerRadius="5dp"
+card_view:cardElevation="4dp"
+card_view:cardUseCompatPadding="true"
+xmlns:tools="http://schemas.android.com/tools">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+
+    >
+
+    <ImageView
+        android:background="@drawable/momos"
+        android:id="@+id/food_image"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="centerCrop"
+        tools:ignore="ContentDescription"/>
+    <TextView
+        android:id="@+id/food_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/food_image"
+        android:paddingLeft="15dp"
+        android:paddingRight="5dp"
+        android:text="Veg Momo (Steam)"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        tools:ignore="RtlHardcoded"/>
+
+
+
+    <TextView
+        android:id="@+id/currency_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/food_image"
+        android:paddingLeft="16sp"
+        android:paddingRight="5dp"
+        android:text="Rs"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        tools:ignore="RtlHardcoded"/>
+
+    <TextView
+        android:id="@+id/food_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/food_image"
+        android:layout_toRightOf="@+id/currency_id"
+        android:paddingRight="5dp"
+        android:text="80"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        tools:ignore="RtlHardcoded"/>
+
+    <TextView
+        android:id="@+id/food_prepare_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/food_name"
+        android:layout_toRightOf="@+id/food_image"
+        android:paddingLeft="16dp"
+        android:paddingRight="5dp"
+        android:text="@string/time_message"
+        android:textColor="#000"
+        android:textSize="18sp"
+        tools:ignore="RtlHardcoded"/>
+
+<!--
+    when user clicks to anywhere except rating bar he is directed to activity_food_order page
+
+-->
+
+    <RatingBar
+        android:id="@+id/food_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/food_prepare_time"
+        android:layout_toEndOf="@+id/food_image"
+        android:numStars="5"
+        android:stepSize="1"
+        android:isIndicator="true"/>
+
+  <!--  <TextView
+        android:id="@+id/food_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/food_rating"
+        android:layout_toRightOf="@+id/food_image"
+        android:paddingLeft="16dp"
+        android:paddingRight="5dp"
+        android:layout_marginTop="15dp"
+        android:text="dsffdddddddddddddddddd"
+        android:textColor="#000"
+        android:textSize="18sp"
+        tools:ignore="RtlHardcoded"/>-->
+</RelativeLayout>
+</android.support.v7.widget.CardView>

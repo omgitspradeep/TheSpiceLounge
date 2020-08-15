@@ -1,0 +1,30 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sujan.info.thespicelounge.fragments.Entertainment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Know the recipies of any food."
+        android:drawableRight="@drawable/love"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        tools:ignore="RtlHardcoded" />
+
+    <WebView
+        android:id="@+id/webview_entertainment"
+        android:layout_below="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="match_parent">
+
+    </WebView>
+
+
+</RelativeLayout>

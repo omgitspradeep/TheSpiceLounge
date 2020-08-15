@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">TheSpiceLounge</string>
+    <string name="title_home">Home</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="login">Login</string>
+    <string name="about_us">About us</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_waiter">WaiterActivity</string>
+    <string name="title_activity_chef">ChefActivity</string>
+    <string name="time_message">50 (Mins) </string>
+    <string name="verify_message">Please verify the details first.</string>
+    <string name="string_no_data_exist">No %s Available</string>
+    <string name="string_activity_table_available">Available</string>
+    <string name="string_activity_table_occupied">Occupied</string>
+    <string name="setup_msg">\t\t\t\t\t\t\t\t\t\t\t\tNo Internet.\nNeed internet connection for initial setUp</string>
+    <string name="refresh">Refresh</string>
+    <string name="ok">OK</string>
+    <string name="table_sel">Dear Customer,\nPlease select your table</string>
+
+    <string name="no_cust_feedbacks">No customer feedbacks available.\n Be first to rate this food item.</string>
+    <string name="cust_feedbacks_avl">Feedbacks by our lovely customers.</string>
+
+
+</resources>

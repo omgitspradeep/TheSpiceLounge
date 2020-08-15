@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_greyish"
+    android:layout_height="wrap_content">
+
+    <TextView
+        style="@style/SimpleTextview"
+        android:text="@string/table_sel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        />
+
+    <Spinner
+        android:layout_marginTop="@dimen/factor_mdpi_35_dp"
+        android:id="@+id/free_table_spinner"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/table_selected_OK"
+        android:layout_width="wrap_content"
+        android:text="OK"
+        style="@style/SimpleTextview"
+        android:layout_gravity="center"
+        android:background="@drawable/editbox"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

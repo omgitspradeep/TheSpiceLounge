@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/cahier_table_background"
+    tools:context="com.sujan.info.thespicelounge.CashierActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBarRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <Toolbar
+        android:id="@+id/toolbar_cashier"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/factor_mdpi_32_dp"
+        />
+
+    <FrameLayout
+        android:layout_below="@+id/toolbar_cashier"
+        android:id="@+id/fragment_cashier_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_cashier_back_to_table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/factor_mdpi_16_dp"
+        app:srcCompat="@drawable/back"
+        android:visibility="invisible"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_refresh_to_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="@dimen/factor_mdpi_16_dp"
+        app:srcCompat="@drawable/refresh"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

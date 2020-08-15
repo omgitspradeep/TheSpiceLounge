@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:id="@+id/ordered_item_table_columns_chef"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/sNo_cashier_title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="S/n"
+            android:textColor="@color/colorPrimaryDark"
+
+            style="@style/SimpleTextview"
+            />
+
+        <TextView
+            android:id="@+id/item_cashier"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="Paneer MoMo (Steam)"
+            android:textColor="@color/colorPrimaryDark"
+            style="@style/SimpleTextview"
+            />
+
+        <TextView
+            android:id="@+id/food_status_cashier"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="Cooking"
+            android:textColor="@android:color/holo_red_dark"
+            style="@style/SimpleTextview"
+            />
+
+
+
+        <TextView
+            android:id="@+id/quantity_cashier"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textColor="@color/colorPrimaryDark"
+
+            style="@style/SimpleTextview"
+            />
+
+        <TextView
+            android:id="@+id/price_item_cashier"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textColor="@android:color/holo_green_dark"
+            style="@style/SimpleTextview"
+            />
+
+
+
+
+    </LinearLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/ordered_item_table_columns_chef"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+</RelativeLayout>

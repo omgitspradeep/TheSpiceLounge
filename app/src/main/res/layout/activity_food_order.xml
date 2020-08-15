@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_place_order"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context="com.sujan.info.thespicelounge.FoodOrderActivity"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/background_color"
+            android:padding="20dp" >
+
+
+
+            <ImageView
+                android:id="@+id/food_image"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/momos"
+                android:padding="10dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/fullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="| Item |"
+                    style="@style/OrderButtonLeft"
+                    />
+
+
+                <TextView
+                    android:id="@+id/order_fullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/fullName"
+                    android:text="MO MO"
+
+                    style="@style/OrderButtonRight"
+
+
+                    />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/white_greyish" />
+
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="| Quantity |"
+                    style="@style/OrderButtonLeft"  />
+
+                <EditText
+                    android:id="@+id/order_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="1"
+                    android:inputType="number"
+                    android:layout_toRightOf="@+id/quantity"
+                    style="@style/OrderButtonRight"
+
+
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/white_greyish" />
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/order_prepare_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="| Preparation time (Mins) |"
+                    style="@style/OrderButtonLeft"  />
+
+                <TextView
+                    android:id="@+id/prepare_time_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/order_prepare_time"
+                    android:text="30"
+                    style="@style/OrderButtonRight"
+
+
+                    />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/white_greyish" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="| Description |"
+                    style="@style/OrderButtonLeft"  />
+
+                <TextView
+                    android:id="@+id/desc_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/desc"
+                    android:text="It is the most popular item in our restaurant.Its ingredients are.... "
+                    style="@style/OrderButtonRight"
+
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/white_greyish" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="| Price (Rs.) |"
+                    style="@style/OrderButtonLeft"  />
+
+                <TextView
+                    android:id="@+id/order_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/price"
+                    android:text="100"
+                    style="@style/OrderButtonRight"
+
+                    />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/white_greyish" />
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/tableNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="| Table No. |"
+                    style="@style/OrderButtonLeft"
+                    />
+
+                <Spinner
+                    android:id="@+id/table_num_spinner_order"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tableNum"
+                    android:padding="10dp"
+                    android:spinnerMode="dialog"
+                    android:layout_alignParentBottom="true"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/messageForChef"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="| Request |"
+                    style="@style/OrderButtonLeft"  />
+
+                <EditText
+                    android:id="@+id/customer_request_order"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/messageForChef"
+                    android:hint="If you have any requests..."
+                    android:gravity="center_vertical"
+                    android:inputType="textCapWords"
+                    android:textSize="16sp"
+                    android:singleLine="false"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:padding="10dp"
+                    android:textColorHint="@color/colorPrimary"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:id="@+id/verify_order_details"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="Verify the details"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/view_item_feedback_customer"
+                    android:background="@android:color/transparent"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="Feedbacks"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/place_order"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:padding="3dp"
+                android:text="Place Order"
+                android:textColor="@color/background_color"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+
+
+
+            <TextView
+                android:id="@+id/already_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="We serve happiness."
+                style="@style/OrderButtonLeft" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/feedback_pb_placeorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        />
+</RelativeLayout>
+
+
+
+
+
+

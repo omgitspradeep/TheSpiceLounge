@@ -1,0 +1,142 @@
+<android.support.v7.widget.CardView
+    android:id="@+id/cardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    card_view:cardBackgroundColor="#fff"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="4dp"
+    card_view:cardUseCompatPadding="true"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <LinearLayout
+        android:weightSum="5"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                >
+
+                <ImageView
+                    android:background="@drawable/momos"
+                    android:id="@+id/food_image_chef"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription"/>
+
+                <TextView
+                    android:id="@+id/food_name_chef"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/food_image_chef"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="5dp"
+                    android:text="Veg Momo (Steam)"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    tools:ignore="RtlHardcoded"/>
+
+
+                <TextView
+                    android:id="@+id/currency_id_chef"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/food_image_chef"
+                    android:text="Rs"
+                    android:textColor="@android:color/holo_green_dark"
+                    style="@style/ChefFoodMenuTV"
+                    />
+
+                <TextView
+                    android:id="@+id/food_price_chef"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/food_image_chef"
+                    android:layout_toEndOf="@+id/currency_id_chef"
+                    android:text="80"
+                    style="@style/ChefFoodMenuTV"
+                    android:textColor="@android:color/holo_green_dark"
+                    />
+
+                <TextView
+                    android:id="@+id/food_prepare_time_chef"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/food_name_chef"
+                    android:layout_toRightOf="@+id/food_image_chef"
+                    android:text="@string/time_message"
+                    style="@style/ChefFoodMenuTV"
+                    android:textColor="#000"
+                    />
+
+
+
+
+<!--
+                when user clicks to anywhere except rating bar he is directed to activity_food_order page
+-->
+
+
+                <RatingBar
+                    android:id="@+id/food_rating_chef"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/food_prepare_time_chef"
+                    android:layout_toEndOf="@+id/food_image_chef"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:clickable="false"
+                    style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                    android:layout_marginStart="15dp"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:background="@color/white_greyish"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/edit_food_item_chef"
+                android:src="@drawable/edit"
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/delete_food_item_chef"
+                android:src="@drawable/delete"
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.sujan.info.thespicelounge.ChefActivity">
+
+
+    <Toolbar
+        android:id="@+id/toolbar_chef_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:title=""
+        />
+
+
+    <LinearLayout
+        android:id="@+id/ordered_item_table_columns_chef"
+        android:layout_below="@+id/toolbar_chef_activity"
+        android:weightSum="6"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/a"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:text="S/n"
+            android:textColor="@android:color/black"
+            style="@style/SimpleTextview"
+            />
+
+        <TextView
+            android:id="@+id/ordered_item"
+            android:layout_width="0dp"
+            android:layout_weight="2.3"
+            android:layout_height="wrap_content"
+            android:text="Item"
+            android:textColor="@color/colorPrimaryDark"
+            style="@style/SimpleTextview"
+            />
+
+
+
+        <TextView
+            android:id="@+id/f"
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_height="wrap_content"
+            android:text="Time (mins)"
+            android:textColor="@android:color/holo_green_dark"
+            style="@style/SimpleTextview"
+            />
+
+
+
+        <TextView
+            android:id="@+id/r"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textColor="@android:color/holo_red_dark"
+            style="@style/SimpleTextview"
+            />
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:text="Qty"
+            android:textColor="@android:color/holo_green_dark"
+            style="@style/SimpleTextview"
+            />
+
+    </LinearLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/ordered_item_table_columns_chef"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/view"
+        android:id="@+id/ordered_items_recycler_chef"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_chef_itemview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/factor_mdpi_20_dp"
+        app:srcCompat="@drawable/spoon" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_chef"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:visibility="invisible"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

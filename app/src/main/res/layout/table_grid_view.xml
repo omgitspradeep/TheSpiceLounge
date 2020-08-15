@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/factor_mdpi_27_dp" >
+
+        <TextView
+            android:id="@+id/Table_Activity_TV_TableNo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textAppearance_mdpi_12_sp" />
+
+       <!-- <ProgressBar
+            android:id="@+id/Table_Activity_PB_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />-->
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/Table_Activity_TV_Seats"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/factor_mdpi_10_dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/textAppearance_mdpi_07_sp" />
+
+</LinearLayout>

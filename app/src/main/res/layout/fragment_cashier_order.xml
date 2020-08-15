@@ -1,0 +1,151 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context="com.sujan.info.thespicelounge.fragments.CashierOrderFragment">
+
+    <LinearLayout
+        android:id="@+id/ordered_item_table_columns_chef"
+        android:layout_weight="10"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:id="@+id/sNo_cashier_title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="S/n"
+            android:textColor="@color/colorPrimaryDark"
+            style="@style/SimpleTextview"
+            />
+
+        <TextView
+            android:id="@+id/item_cashier_title"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="Dish"
+            android:textColor="@color/colorPrimaryDark"
+            style="@style/SimpleTextview"
+            />
+
+        <TextView
+            android:id="@+id/food_status_cashier_title"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textColor="@android:color/holo_red_dark"
+            style="@style/SimpleTextview"
+            />
+
+        <TextView
+            android:id="@+id/quantity_cashier_title"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:text="Qty"
+            android:textColor="@color/colorPrimaryDark"
+
+            style="@style/SimpleTextview"
+            />
+
+        <TextView
+            android:id="@+id/price_item_cashier_title"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:textColor="@android:color/holo_green_dark"
+            style="@style/SimpleTextview"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_cashier_title"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/ordered_item_table_columns_chef"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+
+    <FrameLayout
+        android:layout_weight="70"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ordered_items_recycler_cashier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+
+    <LinearLayout
+            android:layout_weight="20"
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                />
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/checkout_cashier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Checkout "
+                android:textColor="@color/white"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:textSize="@dimen/textAppearance_mdpi_22_sp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="Total"
+                android:textColor="@color/white"
+                android:drawableEnd="@drawable/rupee"
+                android:textSize="@dimen/factor_mdpi_20_dp"
+                android:layout_marginTop="@dimen/factor_mdpi_10_dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/cashier_total_amount"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="1000"
+                android:textColor="@android:color/holo_green_dark"
+                android:textStyle="bold"
+                android:background="@drawable/editbox"
+                android:layout_marginTop="@dimen/factor_mdpi_10_dp"
+                android:textSize="@dimen/factor_mdpi_20_dp"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+
+
+</LinearLayout>

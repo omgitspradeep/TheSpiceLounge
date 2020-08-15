@@ -1,0 +1,83 @@
+[
+  {
+    "tableNum": "1",
+    "tableCapacity": "6",
+    "status": "1",
+    "orders": [
+      {
+        "orderID": "1",
+        "foodID": "10",
+        "tableNum": "1",
+        "orderStatus": "2",
+        "quantity": "2",
+        "extraRequest": "Make it little spicy"
+      },
+      {
+        "orderID": "3",
+        "foodID": "11",
+        "tableNum": "1",
+        "orderStatus": "3",
+        "quantity": "3",
+        "extraRequest": "Bring with tomato ketchup"
+      }
+    ]
+  },
+  {
+    "tableNum": "2",
+    "tableCapacity": "5",
+    "status": "1",
+    "orders": [
+      {
+        "orderID": "2",
+        "foodID": "7",
+        "tableNum": "2",
+        "orderStatus": "1",
+        "quantity": "3",
+        "extraRequest": "with coke"
+      }
+    ]
+  },
+  {
+    "tableNum": "3",
+    "tableCapacity": "4",
+    "status": "0"
+  },
+  {
+    "tableNum": "4",
+    "tableCapacity": "4",
+    "status": "0"
+  },
+  {
+    "tableNum": "5",
+    "tableCapacity": "5",
+    "status": "0"
+  },
+  {
+    "tableNum": "6",
+    "tableCapacity": "4",
+    "status": "1",
+    "orders": [
+      {
+        "orderID": "4",
+        "foodID": "15",
+        "tableNum": "6",
+        "orderStatus": "3",
+        "quantity": "3",
+        "extraRequest": "Make it little crispy"
+      },
+      {
+        "orderID": "5",
+        "foodID": "19",
+        "tableNum": "6",
+        "orderStatus": "3",
+        "quantity": "2",
+        "extraRequest": "Add more onions"
+      }
+    ]
+  },
+  {
+    "tableNum": "7",
+    "tableCapacity": "8",
+    "status": "0"
+  }
+]
