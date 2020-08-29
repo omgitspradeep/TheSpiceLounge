@@ -11,9 +11,85 @@ import java.util.Date;
  */
 
 public class User {
-    private String id, firstName, lastName, phone, email, street, title;
-    private Date birthday;
+    private String empID, username, firstname, lastName, phone, email, address, post;
 
+    public User(String empID, String username, String firstname, String lastName, String phone, String email, String address, String post) {
+        this.empID = empID;
+        this.username = username;
+        this.firstname = firstname;
+        this.lastName = lastName;
+        this.phone = phone;
+        this.email = email;
+        this.address = address;
+        this.post = post;
+    }
+
+    public User() {
+    }
+
+    public String getEmpID() {
+        return empID;
+    }
+
+    public void setEmpID(String empID) {
+        this.empID = empID;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPost() {
+        return post;
+    }
+
+    public void setPost(String post) {
+        this.post = post;
+    }
 
     public JSONObject toJSON() throws JSONException {
         JSONObject jsonObject = new JSONObject();

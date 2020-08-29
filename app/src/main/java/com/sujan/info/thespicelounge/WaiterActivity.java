@@ -13,6 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.Toolbar;
 
 import com.sujan.info.thespicelounge.Adapters.FoodMenuAdapter;
+import com.sujan.info.thespicelounge.Utils.Constants;
 import com.sujan.info.thespicelounge.Utils.MyPreferences;
 import com.sujan.info.thespicelounge.Utils.ResourceManager;
 import com.sujan.info.thespicelounge.Utils.Utils;
@@ -74,7 +75,7 @@ public class WaiterActivity extends BaseActivity implements FoodMenuAdapter.Item
 
     private void init() {
         tb = (Toolbar)findViewById(R.id.toolbar_waiter_activity);
-        tb.setTitle("Waiter Ram");
+        tb.setTitle(MyPreferences.getStringPrefrences(Constants.EMPLOYEE_NAME_TITLE,this));
         tb.inflateMenu(R.menu.toolbar);
         setActionBar(tb);
         displayFoodItemsFrame=(FrameLayout) findViewById(R.id.display_food_items_frame);

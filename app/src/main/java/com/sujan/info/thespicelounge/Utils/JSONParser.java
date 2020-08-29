@@ -7,6 +7,7 @@ import com.sujan.info.thespicelounge.models.CustomerFeedback;
 import com.sujan.info.thespicelounge.models.FoodDetails;
 import com.sujan.info.thespicelounge.models.OrderDetail;
 import com.sujan.info.thespicelounge.models.TableInformation;
+import com.sujan.info.thespicelounge.models.User;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -139,6 +140,23 @@ public final class JSONParser {
             orderDetailArrayList.add(orderDetail);
         }
         return orderDetailArrayList;
+    }
+
+    public static User ParseStaff(JSONObject jsonObject) throws JSONException {
+
+        User staff=new User();
+     //   {"username":"ala","password":"11","firstname":"biniram","lastname":"pandey","email":"bin@gmail.com","phone":"5521","address":"baneshwor","post":"chef","employeeID":"12"}
+
+        staff.setUsername(jsonObject.getString("username"));
+        staff.setAddress(jsonObject.getString("address"));
+        staff.setEmail(jsonObject.getString("email"));
+        staff.setFirstname(jsonObject.getString("firstname"));
+        staff.setLastName(jsonObject.getString("lastname"));
+        staff.setEmpID(jsonObject.getString("employeeID"));
+        staff.setPhone(jsonObject.getString("phone"));
+        staff.setPost(jsonObject.getString("post"));
+
+        return staff;
     }
 }
 

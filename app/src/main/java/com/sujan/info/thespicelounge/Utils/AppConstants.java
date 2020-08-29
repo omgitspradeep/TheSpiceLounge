@@ -24,6 +24,7 @@ public class AppConstants {
     public static String DELETE_MENU_ITEM="deleteFoodItemFromMenu.php";
     public static String CANCEL_FOOD_ORDER="cancelFoodOrder.php";
 
+    public static String LOGIN_STAFF="loginVerification.php";
 
 
 }

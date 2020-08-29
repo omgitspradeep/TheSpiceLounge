@@ -1,24 +1,22 @@
 package com.sujan.info.thespicelounge.webservices;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.view.View;
-import android.widget.ProgressBar;
 
-import com.sujan.info.thespicelounge.MainActivity;
 import com.sujan.info.thespicelounge.Utils.AppConstants;
 import com.sujan.info.thespicelounge.Utils.Constants;
 import com.sujan.info.thespicelounge.Utils.JSONParser;
+import com.sujan.info.thespicelounge.Utils.MyPreferences;
 import com.sujan.info.thespicelounge.Utils.ResourceManager;
-import com.sujan.info.thespicelounge.interfaceT.feedbackListener;
-import com.sujan.info.thespicelounge.models.CustomerFeedback;
-import com.sujan.info.thespicelounge.models.FoodDetails;
+import com.sujan.info.thespicelounge.interfaceT.allOrderedListListener;
+import com.sujan.info.thespicelounge.interfaceT.loginListener;
+import com.sujan.info.thespicelounge.models.OrderDetail;
+import com.sujan.info.thespicelounge.models.User;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -27,24 +25,19 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.text.ParseException;
-import java.util.ArrayList;
 
-/**
- * Created by pradeep on 2/8/20.
- */
+public class StaffLogin extends AsyncTask<String,Integer,Boolean> {
+    User loggedStaff;
+    loginListener listener;
+    Context mContext;
+    String usrname,password;
 
-public class GetCustomerFeedbacks extends AsyncTask<String,Integer,Boolean> {
-    feedbackListener fbListener;
-    private ArrayList<CustomerFeedback> customerFeedbacks;
-    int foodID;
-    @SuppressLint("StaticFieldLeak")
-    ProgressBar pb;
 
-    public GetCustomerFeedbacks(feedbackListener fbListener, int foodId, ProgressBar pb) {
-        this.fbListener = fbListener;
-        this.foodID=foodId;
-        this.pb=pb;
+    public StaffLogin( loginListener staffloginListener, Context context, String usr, String pass) {
+        this.listener = staffloginListener;
+        this.mContext= context;
+        this.usrname=usr;
+        this.password=pass;
     }
 
 
@@ -52,8 +45,9 @@ public class GetCustomerFeedbacks extends AsyncTask<String,Integer,Boolean> {
     protected Boolean doInBackground(String... strings) {
         try{
 
-            Uri.Builder builder = new Uri.Builder().appendQueryParameter("foodID",foodID+"");
-            URL url=new URL(AppConstants.BASE_ADMIN_URL+AppConstants.GET_CUSTOMER_FEEDBACKS);
+
+            Uri.Builder builder = new Uri.Builder().appendQueryParameter("usrname",usrname).appendQueryParameter("pass",password);
+            URL url=new URL(AppConstants.BASE_ADMIN_URL+AppConstants.LOGIN_STAFF);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             String query = builder.build().getEncodedQuery();
 
@@ -83,16 +77,15 @@ public class GetCustomerFeedbacks extends AsyncTask<String,Integer,Boolean> {
             rd.close();
 
             String s = sb.toString();
-            JSONArray jsonArray = new JSONArray(s);
+            System.out.println("User data ===="+s);
 
-            customerFeedbacks=JSONParser.ParseFeedbackItems(jsonArray);
-            System.out.println("Final response===="+jsonArray);
+            loggedStaff = JSONParser.ParseStaff(new JSONObject(s));
+            System.out.println("User data ===="+loggedStaff.getUsername());
 
             return true;
-        }catch (JSONException | IOException | ParseException e){
+
+        }catch (JSONException | IOException e){
             e.printStackTrace();
-            pb.setVisibility(View.GONE);
-            fbListener.onFeedbackReceived(customerFeedbacks,foodID,pb,false);
         }
         return false;
     }
@@ -105,6 +98,16 @@ public class GetCustomerFeedbacks extends AsyncTask<String,Integer,Boolean> {
     @Override
     protected void onPostExecute(Boolean aBoolean) {
         super.onPostExecute(aBoolean);
-        fbListener.onFeedbackReceived(customerFeedbacks,foodID,pb,true);
+        if(aBoolean){
+            ResourceManager.setLoggedStaff(loggedStaff);
+            String employeeTitle=loggedStaff.getFirstname()+" "+loggedStaff.getLastName()+" ( "+loggedStaff.getPost()+ " )";
+            MyPreferences.setStringPrefrences(Constants.EMPLOYEE_NAME_TITLE,employeeTitle,mContext);
+
+            listener.onLoginResponse(true);
+        }else{
+            listener.onLoginResponse(false);
+        }
     }
+
+
 }

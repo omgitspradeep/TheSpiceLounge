@@ -15,6 +15,9 @@ public class Constants {
 
     public static final String LAST_LOGGED_USER = "LAST_LOGGED_USER";
     public static final String IS_USER_LOGGED_IN = "IS_USER_LOGGED_IN";
+    public static final String EMPLOYEE_ID = "EMPLOYEE_ID";
+    public static final String EMPLOYEE_NAME_TITLE = "EMPLOYEE_NAME_TITLE";
+
     public static final int CUST_ID = 0;
     public static final int ADMIN_ID = 1;
     public static final int CHEF_ID = 2;

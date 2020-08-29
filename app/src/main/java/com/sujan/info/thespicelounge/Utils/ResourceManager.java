@@ -28,6 +28,7 @@ import com.sujan.info.thespicelounge.models.CustomerFeedback;
 import com.sujan.info.thespicelounge.models.FoodDetails;
 import com.sujan.info.thespicelounge.models.OrderDetail;
 import com.sujan.info.thespicelounge.models.TableInformation;
+import com.sujan.info.thespicelounge.models.User;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -70,6 +71,16 @@ public class ResourceManager {
 
     public static List<Integer> listOfBusyTables;
     public static int selectedTable;
+
+    public static User loggedStaff;
+
+    public static User getLoggedStaff() {
+        return loggedStaff;
+    }
+
+    public static void setLoggedStaff(User loggedStaff) {
+        ResourceManager.loggedStaff = loggedStaff;
+    }
 
     public static WaiterActivity getWaiterActivityInstance() {
         return waiterActivityInstance;

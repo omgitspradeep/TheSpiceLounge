@@ -63,7 +63,7 @@ public class AdminActivity extends AppCompatActivity {
     private void init() {
 
         tb = (Toolbar) findViewById(R.id.toolbar_admin_activity);
-        tb.setTitle("Admin Alan");
+        tb.setTitle(MyPreferences.getStringPrefrences(Constants.EMPLOYEE_NAME_TITLE,this));
         tb.inflateMenu(R.menu.toolbar);
         setActionBar(tb);
 

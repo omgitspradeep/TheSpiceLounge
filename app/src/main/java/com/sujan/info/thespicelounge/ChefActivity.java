@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.Toolbar;
 
 import com.sujan.info.thespicelounge.Adapters.OrderedListAdapterChef;
+import com.sujan.info.thespicelounge.Utils.Constants;
 import com.sujan.info.thespicelounge.Utils.MyPreferences;
 import com.sujan.info.thespicelounge.Utils.ResourceManager;
 import com.sujan.info.thespicelounge.Utils.Utils;
@@ -80,7 +81,7 @@ public class ChefActivity extends BaseActivity implements orderStatusUpdateListe
 
 
         tb = (Toolbar) findViewById(R.id.toolbar_chef_activity);
-        tb.setTitle("Chef Shine");
+        tb.setTitle(MyPreferences.getStringPrefrences(Constants.EMPLOYEE_NAME_TITLE,this));
         tb.inflateMenu(R.menu.toolbar);
         setActionBar(tb);
 

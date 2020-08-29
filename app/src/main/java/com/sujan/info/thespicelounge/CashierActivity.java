@@ -13,6 +13,7 @@ import android.widget.Toolbar;
 
 import com.sujan.info.thespicelounge.Adapters.OrderedListAdapterCashier;
 import com.sujan.info.thespicelounge.Adapters.TableAdapter;
+import com.sujan.info.thespicelounge.Utils.Constants;
 import com.sujan.info.thespicelounge.Utils.MyPreferences;
 import com.sujan.info.thespicelounge.Utils.Utils;
 import com.sujan.info.thespicelounge.fragments.CashierOrderFragment;
@@ -52,7 +53,7 @@ public class CashierActivity extends BaseActivity implements TableAdapter.tableS
     private void init() {
 
         tb = (Toolbar) findViewById(R.id.toolbar_cashier);
-        tb.setTitle("Cashier Reema");
+        tb.setTitle(MyPreferences.getStringPrefrences(Constants.EMPLOYEE_NAME_TITLE,this));
         tb.inflateMenu(R.menu.toolbar);
         setActionBar(tb);
         progressBar=(ProgressBar)findViewById(R.id.progressBarRefresh);
